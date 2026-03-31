@@ -2,7 +2,7 @@ import React from 'react';
 
 const PartnerWithUs = () => {
   return (
-    <section className="relative w-full py-24 px-6 md:px-[60px] lg:px-[120px]">
+    <section className="relative w-full py-24 px-6 md:px-20 lg:px-20">
       {/* Background Image Setup */}
       <div
         className="absolute inset-0 -z-20"
@@ -16,19 +16,21 @@ const PartnerWithUs = () => {
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-[#0B1325]/85 -z-10" />
 
-      <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+      <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-stretch">
 
         {/* Left Column - Text & Info */}
-        <div className="w-full lg:w-1/2 flex flex-col text-white pt-8">
-          <h2 className="font-['Inter'] font-bold text-[36px] md:text-[46px] tracking-tight mb-8">
-            Partner with us
-          </h2>
+        <div className="w-full lg:w-1/2 flex flex-col justify-between text-white lg:py-[50px]">
+          <div>
+            <h2 className="font-['Inter'] font-bold text-[36px] md:text-[46px] tracking-tight mb-8">
+              Partner with us
+            </h2>
 
-          <p className="font-['Inter'] font-normal text-[15px] md:text-[16px] leading-[28px] opacity-90 max-w-[540px] mb-12">
-            At Phidelis Capital, every decision is crafted towards your objectives — guided by research-led insights and technology-supported intelligence, delivered with clarity and purpose.
-          </p>
+            <p className="font-['Inter'] font-normal text-[15px] md:text-[16px] leading-[28px] opacity-90 max-w-[540px]">
+              At Phidelis Capital, every decision is crafted towards your objectives — guided by research-led insights and technology-supported intelligence, delivered with clarity and purpose.
+            </p>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-12 sm:gap-20">
+          <div className="flex flex-col sm:flex-row gap-12 sm:gap-20 mt-12 lg:mt-0">
             {/* Office Info */}
             <div className="flex flex-col gap-[10px]">
               <h3 className="font-['Inter'] font-bold text-[22px] md:text-[24px]">
@@ -57,12 +59,12 @@ const PartnerWithUs = () => {
 
         {/* Right Column - Form */}
         <div className="w-full lg:w-1/2">
-          <div className="bg-[#FAFAFB] rounded-[16px] p-8 md:p-[50px] shadow-2xl">
+          <div className="bg-[#FAFAFB] rounded-[16px] p-8 md:p-[50px] shadow-2xl h-full flex flex-col">
             <h3 className="text-[#24346D] font-['Inter'] font-bold text-[28px] md:text-[32px] tracking-tight mb-10">
               Get Started
             </h3>
 
-            <form className="flex flex-col gap-10">
+            <form className="flex flex-col gap-10 grow">
               <div className="flex flex-col md:flex-row gap-10">
                 {/* First Name */}
                 <div className="flex flex-col gap-3 w-full md:w-1/2">
@@ -124,7 +126,7 @@ const PartnerWithUs = () => {
               </div>
 
               {/* Submit Button */}
-              <div className="flex justify-end mt-4">
+              <div className="flex justify-end mt-auto pt-8">
                 <button
                   type="button"
                   className="bg-[#8B3A8B] text-white rounded-[32px] px-10 py-3 font-['Inter'] font-medium text-[15px] hover:bg-[#722A72] transition-colors shadow-sm"

@@ -6,12 +6,12 @@ const HomeHero = () => {
   const containerRef = useRef(null);
 
   useGSAP(() => {
-    // Add entrance animation for text based on existing GSAP usage
+    // Add polished entrance animation for elements
     gsap.from('.hero-elem', {
-      y: 80,
+      y: 50,
       opacity: 0,
       duration: 1.2,
-      stagger: 0.2,
+      stagger: 0.15,
       ease: 'power3.out',
     });
   }, { scope: containerRef });
@@ -19,7 +19,7 @@ const HomeHero = () => {
   return (
     <section 
       ref={containerRef}
-      className="relative w-full h-[800px] flex flex-col items-center justify-center pt-[120px] px-6 gap-[40px] md:gap-[60px]"
+      className="relative w-full h-[800px] flex flex-col items-center justify-center px-6 gap-[24px]"
     >
       {/* Background Image Setup */}
       <div 
@@ -33,29 +33,27 @@ const HomeHero = () => {
       />
       
       {/* Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-black/40 -z-10" />
+      <div className="absolute inset-0 bg-black/60 -z-10" />
 
       {/* Logo in Hero Section */}
-      <div className="hero-elem flex items-center justify-center gap-4 mb-2">
-        <img src="/navBar/logo.png" alt="PC" className="h-[60px] md:h-[80px] w-auto object-contain" />
-        <div className="text-[32px] md:text-[48px] tracking-tight">
-          <span className="text-white font-['Inter'] font-medium">Phidelis </span>
-          <span className="text-[#3ba3eb] font-['Inter'] font-semibold">Capital</span>
-        </div>
+      <div className="hero-elem mb-[10px]">
+        <img src="/navBar/logo3.svg" alt="Phidelis Capital" className="w-[850px] h-[150px] object-contain" />
       </div>
 
-      {/* Hero Content */}
-      <h1 className="hero-elem text-white font-['Inter'] font-medium text-[40px] md:text-[64px] leading-snug md:leading-[66px] tracking-normal text-center w-full whitespace-nowrap">
-        Trusted Wealth Stewardship
-      </h1>
-      
-      <p className="hero-elem text-white font-['Inter'] font-light text-[24px] md:text-[32px] md:leading-[66px] tracking-normal text-center w-full max-w-[800px]">
-        Built on Integrity and Insight
-      </p>
+      {/* Hero Content - Title and Subtitle with smaller gap */}
+      <div className="flex flex-col items-center gap-[6px]">
+        <h1 className="hero-elem text-white font-['Inter'] font-medium text-[64px] leading-[66px] tracking-normal text-center w-full">
+          Trusted Wealth Stewardship
+        </h1>
+        
+        <p className="hero-elem text-white font-['Inter'] font-light text-[32px] leading-[66px] tracking-normal text-center w-full">
+          Built on Integrity and Insight
+        </p>
+      </div>
 
-      {/* Get Started Button shown in the design */}
-      <div className="hero-elem mt-4">
-        <button className="bg-white text-[#24346D] rounded-[32px] px-[32px] py-[16px] font-['Inter'] font-medium text-[16px] md:text-[18px] hover:bg-gray-100 transition-colors">
+      {/* Get Started Button */}
+      <div className="hero-elem mt-[24px]">
+        <button className="flex items-center justify-center gap-[10px] w-[137px] h-[43px] px-[24px] py-[12px] bg-white text-[#24346D] rounded-[30px] font-['Inter'] font-normal text-[16px] leading-[100%] hover:bg-gray-100 transition-colors">
           Get Started
         </button>
       </div>
