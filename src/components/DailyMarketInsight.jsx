@@ -80,21 +80,22 @@ const DailyMarketInsight = () => {
       ref={containerRef}
       className="w-full bg-[#2A3A6A] py-24 px-6 md:px-[20px] lg:px-20 overflow-hidden"
     >
-      <div className=" relative max-w-[1440px] mx-auto bg-[#2A4781] border border-0 rounded-3xl p-10 md:p-16 lg:p-20 grid-cols-2 grid max-w-[1200px] mx-auto se-text-block">
+      <div className="relative max-w-[1200px] mx-auto bg-[#2A4781] rounded-3xl p-8 md:p-16 lg:p-20 grid grid-cols-1 lg:grid-cols-2 gap-8 se-text-block overflow-visible">
         <div className="flex flex-col items-start">
-          <div className="se-title text-white font-['Inter'] font-medium text-[36px] md:text-[42px] lg:text-[40px] tracking-normal mb-6 lg:mb-10">
+          <div className="se-title text-white font-['Inter'] font-medium text-[clamp(28px,5vw,40px)] tracking-normal mb-6 lg:mb-10">
             Daily Market Insights, Delivered
           </div>
-          <div className="se-desc text-white font-['Inter'] font-normal text-[15px] md:text-[16px] leading-[28px] opacity-90 max-w-[540px] mb-12">
-            Stay ahead with Phidelis Capital’s daily reports on markets, trends,
+          <div className="se-desc text-white font-['Inter'] font-normal text-[15px] md:text-[16px] leading-[28px] opacity-90 max-w-[540px] mb-8 md:mb-12">
+            Stay ahead with Phidelis Capital's daily reports on markets, trends,
             and opportunities.
           </div>
           <button className="se-btn self-start bg-white text-[#2A3A6A] rounded-[32px] px-8 py-3 font-['Inter'] font-medium text-[16px] hover:bg-gray-100 transition-colors shadow-sm">
             Follow Us on Linkedin
           </button>
         </div>
-        <div className="w-[30%] absolute top-[-5rem] right-20">
-          <img src="/homePage/dailyMarketInsights.png" alt="" />
+        {/* Image: flows naturally on mobile, absolutely positioned on desktop */}
+        <div className="flex items-center justify-center lg:absolute lg:top-[-5rem] lg:right-20 lg:w-[30%]">
+          <img src="/homePage/dailyMarketInsights.png" alt="Daily Market Insights" className="w-full max-w-[300px] lg:max-w-none" />
         </div>
       </div>
     </section>

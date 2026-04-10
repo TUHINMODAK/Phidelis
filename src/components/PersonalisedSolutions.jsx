@@ -86,15 +86,9 @@ const PersonalisedSolutions = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-stretch">
           {/* Left Column - Image */}
           <div className="ps-image w-full lg:w-[45%] h-[350px] lg:h-auto rounded-[16px] overflow-hidden flex-shrink-0 shadow-lg">
-<<<<<<< HEAD
             <img
               src="/homePage/presonalisedSolutions.jpg"
               alt="Personalised Solutions"
-=======
-            <img 
-              src="/homePage/personalisedSolution.jpg" 
-              alt="Personalised Solutions" 
->>>>>>> 6c0e7a1ca0725654063656c89754b338869cff24
               className="w-full h-full object-cover"
             />
           </div>

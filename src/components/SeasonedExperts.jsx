@@ -9,9 +9,9 @@ const SeasonedExperts = () => {
   const containerRef = useRef(null);
 
   const teamMembers = [
-    '/people/p1.png',
-    '/people/p2.png',
-    '/people/p3.png',
+    { img: '/people/p1.png', name: 'Anuj Grover', title: 'Chief Executive Officer' },
+    { img: '/people/p2.png', name: 'Prashant Shah', title: 'Chief Investment Officer' },
+    { img: '/people/p3.png', name: 'Patricia Lim', title: 'Head of Operations' },
   ];
 
   useGSAP(() => {
@@ -71,22 +71,30 @@ const SeasonedExperts = () => {
   return (
     <section ref={containerRef} className="w-full bg-white py-24 px-6 md:px-[20px] lg:px-20 overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
-        <h2 className="se-title text-white font-['Inter'] font-medium text-[clamp(28px,5vw,40px)] tracking-normal mb-16 lg:mb-20">
+        <h2 className="se-title text-[#2A3A6A] font-['Inter'] font-medium text-[clamp(28px,5vw,40px)] tracking-normal mb-16 lg:mb-20">
           Seasoned Experts, Trusted Advisors
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-          {/* Left Column - Team Avatars */}
+          {/* Left Column - Team Member Cards */}
           <div className="w-full lg:w-1/2">
-            <div className="se-avatars-grid grid grid-cols-3 gap-x-4 md:gap-x-6 gap-y-8 md:gap-y-12 max-w-[500px] mx-auto lg:mx-0">
-              {teamMembers.map((img, idx) => (
-                <div key={idx} className="se-avatar flex justify-center">
-                  <div className="w-[90px] h-[90px] sm:w-[110px] sm:h-[110px] md:w-[135px] md:h-[135px] rounded-full bg-white overflow-hidden shadow-sm flex items-center justify-center">
+            <div className="se-avatars-grid grid grid-cols-3 gap-4 md:gap-6 items-stretch max-w-[520px] mx-auto lg:mx-0">
+              {teamMembers.map((member, idx) => (
+                <div key={idx} className="se-avatar rounded-[12px] overflow-hidden shadow-md">
+                  {/* Photo with gradient overlay */}
+                  <div className="relative h-full min-h-[200px] bg-gradient-to-b from-[#1a2a5e] to-[#2d3d6d]">
                     <img
-                      src={img}
-                      alt={`Team Member ${idx + 1}`}
+                      src={member.img}
+                      alt={member.name}
                       className="w-full h-full object-cover object-top"
                     />
+                    {/* Bottom gradient for text readability */}
+                    <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    {/* Name and Title overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+                      <p className="text-white font-['Inter'] font-semibold text-[11px] md:text-[14px] leading-tight">{member.name}</p>
+                      <p className="text-white/80 font-['Inter'] font-normal text-[9px] md:text-[12px] leading-tight mt-1">{member.title}</p>
+                    </div>
                   </div>
                 </div>
               ))}
