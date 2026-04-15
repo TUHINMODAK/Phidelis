@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -30,28 +31,28 @@ const Footer = () => {
           <div className="flex flex-col justify-start">
             <ul className="flex flex-col gap-[16px] font-medium text-[14px] opacity-90">
               <li>
-                <a
-                  href="#technology"
+                <Link
+                  to="/technology" 
                   className="hover:text-gray-300 transition-colors"
                 >
                   Technology
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#solutions"
+                <Link
+                  to="/solutions"
                   className="hover:text-gray-300 transition-colors"
                 >
                   Solutions
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#company"
+                <Link
+                  to="/company"
                   className="hover:text-gray-300 transition-colors"
                 >
                   Company
-                </a>
+                </Link>
               </li>
               <li>
                 <a

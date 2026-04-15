@@ -9,9 +9,9 @@ const SeasonedExperts = () => {
   const containerRef = useRef(null);
 
   const teamMembers = [
-    { img: '/people/p1.png', name: 'Anuj Grover', title: 'Chief Executive Officer' },
-    { img: '/people/p2.png', name: 'Prashant Shah', title: 'Chief Investment Officer' },
-    { img: '/people/p3.png', name: 'Patricia Lim', title: 'Head of Operations' },
+    { img: '/people/anuj-grover.jpg', name: 'Anuj Grover', title: 'Chief Executive Officer' },
+    { img: '/people/prashant-shah.jpg', name: 'Prashant Shah', title: 'Chief Investment Officer' },
+    { img: '/people/patricia-lim.jpg', name: 'Patricia Lim', title: 'Head of Operations' },
   ];
 
   useGSAP(() => {
@@ -78,7 +78,7 @@ const SeasonedExperts = () => {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
           {/* Left Column - Team Member Cards */}
           <div className="w-full lg:w-1/2">
-            <div className="se-avatars-grid grid grid-cols-3 gap-4 md:gap-6 items-stretch max-w-[520px] mx-auto lg:mx-0">
+            <div className="se-avatars-grid grid grid-cols-3 gap-4 md:gap-6 items-stretch max-w-[720px] mx-auto lg:mx-0">
               {teamMembers.map((member, idx) => (
                 <div key={idx} className="se-avatar rounded-[12px] overflow-hidden shadow-md">
                   {/* Photo with gradient overlay */}
@@ -91,9 +91,9 @@ const SeasonedExperts = () => {
                     {/* Bottom gradient for text readability */}
                     <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black/80 to-transparent"></div>
                     {/* Name and Title overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
-                      <p className="text-white font-['Inter'] font-semibold text-[11px] md:text-[14px] leading-tight">{member.name}</p>
-                      <p className="text-white/80 font-['Inter'] font-normal text-[9px] md:text-[12px] leading-tight mt-1">{member.title}</p>
+                    <div className="absolute bottom-0 left-0 right-0 p-3 flex flex-col justify-center md:p-4">
+                      <p className="text-white font-['Inter'] mx-auto font-semibold text-[11px] md:text-[14px] leading-tight">{member.name}</p>
+                      <p className="text-white/80 font-['Inter'] mx-auto font-normal text-[9px] md:text-[12px] leading-tight mt-1">{member.title}</p>
                     </div>
                   </div>
                 </div>

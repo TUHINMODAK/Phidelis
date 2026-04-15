@@ -5,21 +5,21 @@ const teamMembers = [
     name: 'Anuj Grover',
     role: 'Chief Executive Officer',
     desc: 'Over 20 years in private banking and wealth management with Citi, HSBC, UBS, and J. Safra Sarasin. Specialist in investment advisory, portfolio construction and legacy planning for UHNW clients across key global regions.',
-    img: '/company/anuj_grover.png',
+    img: '/people/anuj-grover.jpg',
     linkedin: '#'
   },
   {
     name: 'Prashant Shah',
     role: 'Chief Investment Officer',
     desc: 'Over 25 years in wealth & asset management with UBS, J. Safra Sarasin, Standard Chartered, ENAM and Matterhorn. Expertise in multi-asset advisory, Fund Management, Equity Discretionary Portfolios for UHNW families and institutions.',
-    img: '/company/prashant_shah.png',
+    img: '/people/prashant-shah.jpg',
     linkedin: '#'
   },
   {
     name: 'Patricia Lim',
     role: 'Head of Operations',
     desc: 'Over 35 years in banking across Citi, UBS, Deutsche Bank, DBS, Standard Chartered, and J. Safra Sarasin. Skilled in client advisory, relationship management, and operational leadership.',
-    img: '/company/patricia_lim.png',
+    img: '/people/patricia-lim.jpg',
     linkedin: '#'
   },
   {
@@ -66,7 +66,7 @@ const CompanyTeam = () => {
               {/* Profile Image */}
               <div className="mb-6 w-[70px] h-[70px] rounded-full overflow-hidden flex-shrink-0">
                 {member.img ? (
-                  <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
+                  <img src={member.img} alt={member.name} className="w-full h-full object-cover object-[10%_5%]" />
                 ) : (
                   <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 font-medium">N/A</div>
                 )}
