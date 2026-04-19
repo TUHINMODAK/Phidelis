@@ -5,8 +5,58 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phidelis</title>
+    <style>
+      #global-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background-color: #24346D;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #global-loader img {
+        width: 180px;
+        margin-bottom: 2rem;
+        object-fit: contain;
+      }
+      @media (min-width: 768px) {
+        #global-loader img { width: 250px; }
+      }
+      .progress-container {
+        width: 200px;
+        height: 3px;
+        background-color: transparent;
+        border-radius: 9999px;
+        overflow: hidden;
+        position: relative;
+      }
+      @media (min-width: 768px) {
+        .progress-container { width: 300px; }
+      }
+      #progress-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,0));
+        box-shadow: 0 0 10px rgba(255,255,255,0.5);
+      }
+    </style>
   </head>
   <body>
+    <!-- Initial Loader that renders before React -->
+    <div id="global-loader">
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <img src="/navBar/logo3.svg" alt="Phidelis Capital" />
+        <div class="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
