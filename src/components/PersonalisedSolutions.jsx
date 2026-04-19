@@ -2,10 +2,12 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PersonalisedSolutions = () => {
+  const navigate = useNavigate();
   const containerRef = useRef(null);
 
   useGSAP(
@@ -124,7 +126,11 @@ const PersonalisedSolutions = () => {
                 </div>
               </div>
 
-              <button className="ps-button self-start bg-[#8B3A8B] text-white rounded-[32px] px-8 py-3 font-['Inter'] font-normal text-[16px] hover:bg-[#722A72] transition-colors shadow-md">
+              <button className="ps-button self-start cursor-pointer bg-[#8B3A8B] text-white rounded-[32px] px-8 py-3 font-['Inter'] font-normal text-[16px] hover:bg-[#722A72] transition-colors shadow-md"
+              onClick={() => {
+                navigate("/solutions", { state: { section: "solutions-designed" } });
+              }}
+              >
                 Learn more
               </button>
             </div>

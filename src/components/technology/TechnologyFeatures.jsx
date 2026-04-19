@@ -54,7 +54,7 @@ const TechnologyFeatures = () => {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden bg-[#1e2a5e]">
+    <section id="technology-features" ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden bg-[#1e2a5e]">
       <div className="w-full py-10 lg:py-20 px-6 md:px-20 overflow-hidden">
 
         {/* Title */}

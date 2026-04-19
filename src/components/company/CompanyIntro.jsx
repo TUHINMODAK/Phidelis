@@ -33,7 +33,7 @@ const CompanyIntro = () => {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden">
+    <section id="company-intro" ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden">
       <div className="w-full bg-white py-10 lg:py-20 px-6 md:px-20 flex flex-col md:flex-row rounded-[16px] shadow-sm overflow-hidden">
         
         {/* Left Side - Gradient and Text */}

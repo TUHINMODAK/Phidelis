@@ -8,8 +8,26 @@ import TechnologyPowers from '../components/TechnologyPowers';
 import PartnerWithUs from '../components/PartnerWithUs';
 import Footer from '../components/Footer';
 import DailyMarketInsight from '../components/DailyMarketInsight';
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const HomePage = () => {
+  const { state } = useLocation();
+
+  useEffect(() => {
+    if (state?.section) {
+      const el = document.getElementById(state.section);
+
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100); // wait for render
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [state]);
+  
   return (
     <>
       <Navbar />

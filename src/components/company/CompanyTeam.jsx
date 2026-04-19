@@ -77,7 +77,7 @@ const CompanyTeam = () => {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden bg-[url('/common/gradient-Bg.png')] bg-cover bg-center">
+    <section id="company-team" ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden bg-[url('/common/gradient-Bg.png')] bg-cover bg-center">
       <div className="w-full py-10 lg:py-20 px-6 md:px-20 overflow-hidden">
         
         {/* Header */}

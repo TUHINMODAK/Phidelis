@@ -50,7 +50,7 @@ const SolutionsAssetManagement = () => {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden bg-[#24346D]">
+    <section id="solutions-asset-management" ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden bg-[#24346D]">
       <div className="w-full py-10 lg:py-20 px-6 md:px-20 overflow-hidden pb-32">
 
         {/* Header Section */}

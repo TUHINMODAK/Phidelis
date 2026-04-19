@@ -2,11 +2,13 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HowWeCreateValue = () => {
   const containerRef = useRef(null);
+  const navigate = useNavigate();
 
   useGSAP(
     () => {
@@ -55,21 +57,24 @@ const HowWeCreateValue = () => {
       title: "Solutions",
       description: "Tailored strategies for every objective.",
       icon: "/icons/Isolation_Mode.jpg", // Replace with your concentric circles icon path
+      link: "/solutions"
     },
     {
       title: "Technology",
       description: "Clarity and control through intelligent tools.",
       icon: "/icons/Layer_1.jpg", // Replace with your circles icon path
+      link: "/technology"
     },
     {
       title: "Company",
       description: "Seasoned expertise, united by integrity.",
       icon: "/icons/Vector.jpg", // Replace with your diamond icon path
+      link: "/company"
     },
   ];
 
   return (
-    <section ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden">
+    <section id="how-we-create-value" ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden">
       <div className="w-full bg-white py-10 lg:py-20 px-6 md:px-20 overflow-hidden">
         <div className="max-w-[1440px] mx-auto">
           {/* Section Title */}
@@ -105,8 +110,11 @@ const HowWeCreateValue = () => {
                       {card.description}
                     </p>
                     <button
-                      className="w-9 h-9 bg-[#1E2B58] rounded-full flex items-center justify-center hover:bg-blue-900 transition-all group shrink-0 md:mt-auto"
+                      className="w-9 h-9 bg-[#1E2B58] rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-900 transition-all group shrink-0 md:mt-auto"
                       aria-label={`Learn more about ${card.title}`}
+                      onClick={() => {
+                        navigate(`${card.link}`);
+                      }}
                     >
                       <svg
                         viewBox="0 0 24 24"

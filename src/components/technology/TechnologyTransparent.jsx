@@ -33,7 +33,7 @@ const TechnologyTransparent = () => {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden">
+    <section id="technology-transparent" ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden">
       <div className="w-full bg-white py-10 lg:py-20 px-6 md:px-20 overflow-hidden">
 
         {/* Title */}

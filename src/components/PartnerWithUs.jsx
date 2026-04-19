@@ -99,7 +99,7 @@ const PartnerWithUs = () => {
               <div className="flex flex-col md:flex-row gap-10">
                 {/* First Name */}
                 <div className="flex flex-col gap-3 w-full md:w-1/2">
-                  <label className="text-[#64748B] font-['Inter'] font-bold text-[12px] md:text-[13px] tracking-tight">
+                  <label className="text-[#24346D] font-['Inter'] font-bold text-[12px] md:text-[13px] tracking-tight">
                     First Name
                   </label>
                   <input
@@ -122,7 +122,7 @@ const PartnerWithUs = () => {
               <div className="flex flex-col md:flex-row gap-10">
                 {/* Email */}
                 <div className="flex flex-col gap-3 w-full md:w-1/2">
-                  <label className="text-[#64748B] font-['Inter'] font-bold text-[12px] md:text-[13px] tracking-tight">
+                  <label className="text-[#24346D] font-['Inter'] font-bold text-[12px] md:text-[13px] tracking-tight">
                     Email
                   </label>
                   <input
@@ -144,7 +144,7 @@ const PartnerWithUs = () => {
 
               {/* Message */}
               <div className="flex flex-col gap-3 mt-2">
-                <label className="text-[#64748B] font-['Inter'] font-bold text-[12px] md:text-[13px] tracking-tight">
+                <label className="text-[#24346D] font-['Inter'] font-bold text-[12px] md:text-[13px] tracking-tight">
                   Message
                 </label>
                 <input

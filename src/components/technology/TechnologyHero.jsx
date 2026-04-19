@@ -28,6 +28,7 @@ const TechnologyHero = () => {
   return (
     <section
       ref={containerRef}
+      id="technology-hero"
       className="relative w-full h-[50vh] min-h-[400px] md:min-h-[247px] md:h-[247px] flex items-center justify-center mt-[80px] overflow-hidden"
     >
       {/* Background Image Setup */}

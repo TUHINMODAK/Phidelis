@@ -19,6 +19,7 @@ const HomeHero = () => {
   return (
     <section 
       ref={containerRef}
+      id="home-hero"
       className="relative w-full h-[800px] flex flex-col items-center justify-center px-6 gap-[24px]"
     >
       {/* Background Image Setup */}
