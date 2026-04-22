@@ -60,16 +60,15 @@ const HowWeCreateValue = () => {
       link: "/solutions"
     },
     {
-      title: "Technology",
-      description: "Clarity and control through intelligent tools.",
-      icon: "/icons/Layer_1.jpg", // Replace with your circles icon path
-      link: "/technology"
-    },
-    {
       title: "Company",
       description: "Seasoned expertise, united by integrity.",
       icon: "/icons/Vector.jpg", // Replace with your diamond icon path
       link: "/company"
+    },{
+      title: "Technology",
+      description: "Clarity and control through intelligent tools.",
+      icon: "/icons/Layer_1.jpg", // Replace with your circles icon path
+      link: "/technology"
     },
   ];
 

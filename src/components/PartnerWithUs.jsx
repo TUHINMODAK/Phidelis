@@ -80,8 +80,25 @@ const PartnerWithUs = () => {
                 Contact
               </h3>
               <div className="font-['Inter'] font-medium text-[15px] leading-[26px] opacity-90">
-                <p>management@phideliscapital.com</p>
-                <p>careers@phideliscapital.com</p>
+                
+                <a 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=management@phideliscapital.com"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block hover:underline"
+                >
+                  management@phideliscapital.com
+                </a>
+
+                <a 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=careers@phideliscapital.com"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block hover:underline"
+                >
+                  careers@phideliscapital.com
+                </a>
+
                 <p>+65 6485 4142</p>
               </div>
             </div>

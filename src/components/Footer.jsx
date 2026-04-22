@@ -28,50 +28,42 @@ const Footer = () => {
         </div>
 
         {/* Links Column */}
-          <div className="flex flex-col justify-start">
-            <ul className="flex flex-col gap-[16px] font-medium text-[14px] opacity-90">
-              <li>
-                <Link
-                  to="/technology" 
-                  className="hover:text-gray-300 transition-colors"
-                >
-                  Technology
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/solutions"
-                  className="hover:text-gray-300 transition-colors"
-                >
-                  Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/company"
-                  className="hover:text-gray-300 transition-colors"
-                >
-                  Company
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="#get-in-touch"
-                  className="hover:text-gray-300 transition-colors"
-                >
-                  Get in Touch
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="hover:text-gray-300 transition-colors"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div className="flex flex-col justify-start">
+          <ul className="flex flex-col gap-[16px] font-medium text-[14px] opacity-90">
+            <li>
+              <Link
+                to="/solutions"
+                className="hover:text-gray-300 transition-colors"
+              >
+                Solutions
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/company"
+                className="hover:text-gray-300 transition-colors"
+              >
+                Company
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/technology"
+                className="hover:text-gray-300 transition-colors"
+              >
+                Technology
+              </Link>
+            </li>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=management@phideliscapital.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-300 transition-colors"
+            >
+              Contact
+            </a>
+          </ul>
+        </div>
 
         {/* Copyright and Arrow Column */}
         <div className="flex flex-row lg:flex-col justify-between items-center lg:items-end md:w-1/4 shrink-0">
