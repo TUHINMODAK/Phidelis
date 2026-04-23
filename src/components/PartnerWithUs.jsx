@@ -90,15 +90,6 @@ const PartnerWithUs = () => {
                   management@phideliscapital.com
                 </a>
 
-                <a 
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=careers@phideliscapital.com"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block hover:underline"
-                >
-                  careers@phideliscapital.com
-                </a>
-
                 <p>+65 6485 4142</p>
               </div>
             </div>
