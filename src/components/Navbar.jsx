@@ -93,7 +93,7 @@ const Navbar = () => {
         {/* CTA Button */}
         <div className="hidden md:flex gap-8">
           <a
-            href="#"
+            href="https://www.linkedin.com/company/phidelis-capital-pte-ltd/"
             target="_blank"
             rel="noreferrer"
             className="flex items-center justify-center"

@@ -11,39 +11,39 @@ const teamMembers = [
     role: 'Chief Executive Officer',
     desc: 'Over 20 years in private banking and wealth management with Citi, HSBC, UBS, and J. Safra Sarasin. Specialist in investment advisory, portfolio construction and legacy planning for UHNW clients across key global regions.',
     img: '/people/anuj-grover.jpg',
-    linkedin: '#'
+    linkedin: 'https://www.linkedin.com/in/anuj-grover-b7b7a31/'
   },
   {
     name: 'Prashant Shah',
     role: 'Chief Investment Officer',
     desc: 'Over 25 years in wealth & asset management with UBS, J. Safra Sarasin, Standard Chartered, ENAM and Matterhorn. Expertise in multi-asset advisory, Fund Management, Equity Discretionary Portfolios for UHNW families and institutions.',
     img: '/people/prashant-shah.jpg',
-    linkedin: '#'
+    linkedin: 'https://www.linkedin.com/in/prashant-shah-39904026/'
   },
   {
     name: 'Patricia Lim',
     role: 'Head of Operations',
     desc: 'Over 35 years in banking across Citi, UBS, Deutsche Bank, DBS, Standard Chartered, and J. Safra Sarasin. Skilled in client advisory, relationship management, and operational leadership.',
     img: '/people/patricia-lim.jpg',
-    linkedin: '#'
+    linkedin: 'https://www.linkedin.com/in/patricia-lim-a5074178/'
   },
   {
     name: 'Nandini Vijayaraghavan',
     role: 'Head of Research',
     desc: 'Over 25 years in financial research and strategy. Former Head of Research at KDB Singapore and Director at Fitch Ratings, specialising in credit, ESG, and Asian markets.',
-    linkedin: '#'
+    linkedin: 'https://www.linkedin.com/in/nandini-vijayaraghavan-cfa/'
   },
   {
     name: 'Yuvraj Govindan',
     role: 'Investment Manager',
     desc: 'Over 20 years as a Chartered Accountant and family office advisor. Experienced in private equity, real estate, and structuring tailored investment vehicles for single family offices.',
-    linkedin: '#'
+    linkedin: 'https://www.linkedin.com/in/yuvaraj-govindan-fmva-aca-ab710215/'
   },
   {
     name: 'Sushruth Sunder',
     role: 'Investment Analyst',
     desc: '10 years in asset management, equity research, and financial journalism. Former equity research lead at INDmoney and journalist at Financial Express.',
-    linkedin: '#'
+    linkedin: 'https://www.linkedin.com/in/sushruth-sunder-cfa-79481099/'
   }
 ];
 

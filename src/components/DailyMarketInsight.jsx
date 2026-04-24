@@ -102,9 +102,14 @@ const DailyMarketInsight = () => {
             Stay ahead with Phidelis Capital's daily reports on markets, trends,
             and opportunities.
           </div>
-          <button className="se-btn self-start cursor-pointer bg-white text-[#2A3A6A] rounded-[32px] px-8 py-3 font-['Inter'] font-medium text-[16px] hover:bg-gray-100 transition-colors shadow-sm">
+          <a
+            href="https://www.linkedin.com/company/phidelis-capital-pte-ltd/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="se-btn self-start cursor-pointer bg-white text-[#2A3A6A] rounded-[32px] px-8 py-3 font-['Inter'] font-medium text-[16px] hover:bg-gray-100 transition-colors shadow-sm inline-block"
+          >
             Follow Us on Linkedin
-          </button>
+          </a>
         </div>
         <div className="se-phone relative w-[70%] sm:w-[50%] mx-auto mt-10 lg:absolute lg:w-[40%] lg:top-[-5rem] lg:right-20 lg:mt-0">
           <img src="/homePage/dailyMarketInsights.png" alt="" className="w-full h-auto" />
