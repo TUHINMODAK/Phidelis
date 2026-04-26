@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
+let hasAnimated = false;
+
 const Navbar = () => {
   const location = useLocation();
   const isCompanyPage = location.pathname === "/company";
@@ -24,12 +26,15 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   useGSAP(() => {
-    gsap.from(navRef.current, {
-      y: -80,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out",
-    });
+    if (!hasAnimated) {
+      gsap.from(navRef.current, {
+        y: -80,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+      hasAnimated = true;
+    }
   }, []);
 
   const scrollToContact = (e) => {
