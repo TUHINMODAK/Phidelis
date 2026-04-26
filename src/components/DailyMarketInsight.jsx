@@ -13,7 +13,7 @@ const DailyMarketInsight = () => {
   useGSAP(
     () => {
       // Title
-      gsap.from(".se-title", {
+      gsap.from(".daily-title", {
         y: 40,
         opacity: 0,
         duration: 0.8,
@@ -38,7 +38,7 @@ const DailyMarketInsight = () => {
       });
 
       // phone
-      gsap.from(".se-phone", {
+      gsap.from(".daily-phone", {
         y: 100,
         opacity: 0,
         duration: 1,
@@ -52,36 +52,29 @@ const DailyMarketInsight = () => {
       // Text block sequence
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".se-text-block",
+          trigger: ".daily-text-block",
           start: "top 80%",
         },
-      });
+      }); 
 
-      tl.from(".se-line", {
-        width: 0,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-      })
-        .from(
-          ".se-desc",
+      tl.from(
+          ".daily-desc",
           {
             y: 30,
             opacity: 0,
             duration: 0.8,
             ease: "power3.out",
-          },
-          "-=0.4",
+          }
         )
         .from(
-          ".se-btn",
+          ".daily-btn",
           {
             y: 20,
             opacity: 0,
             duration: 0.5,
             ease: "power3.out",
           },
-          "-=0.4",
+          "-=0.4"
         );
     },
     { scope: containerRef },
@@ -92,16 +85,16 @@ const DailyMarketInsight = () => {
       ref={containerRef}
       className="w-full bg-[#2A3A6A] py-24 px-6 md:px-[20px] lg:px-20 overflow-hidden"
     >
-      <div className="relative max-w-[100%] mx-auto bg-[#2A4781] rounded-3xl p-8 md:p-16 lg:p-20 grid grid-cols-1 lg:grid-cols-2 gap-8 se-text-block overflow-visible">
-        <div className="flex flex-col items-start">
-          <div className="se-title text-white font-['Inter'] font-medium text-[clamp(28px,5vw,40px)] tracking-normal mb-6 lg:mb-10">
+      <div className="relative max-w-[100%] mx-auto bg-[#2A4781] rounded-3xl p-8 md:p-16 lg:p-20 grid grid-cols-1 lg:grid-cols-2 gap-8 daily-text-block overflow-visible">
+        <div className="flex flex-col items-start bg-transparent relative z-10 w-full mb-10 lg:mb-0">
+          <div className="daily-title text-white font-['Inter'] font-medium text-[clamp(28px,5vw,40px)] tracking-normal mb-6 lg:mb-10">
             Daily Market Insights, Delivered
           </div>
-          <div className="se-desc text-white font-['Inter'] font-normal text-[15px] md:text-[16px] leading-[28px] opacity-90 max-w-[540px] mb-8 md:mb-12">
+          <div className="daily-desc text-white font-['Inter'] font-normal text-[15px] md:text-[16px] leading-[28px] opacity-90 max-w-[540px] mb-8 md:mb-12">
             Stay ahead with Phidelis Capital's daily reports on markets, trends,
             and opportunities.
           </div>
-          <button className="se-btn self-start bg-white text-[#2A3A6A] rounded-[32px] px-6 lg:px-8 py-3 font-['Inter'] font-medium text-[14px] lg:text-[16px] whitespace-nowrap hover:bg-gray-100 hover:scale-105 hover:shadow-lg transition-all duration-300 shadow-sm">
+          <button className="daily-btn self-start bg-white text-[#2A3A6A] rounded-[32px] px-6 lg:px-8 py-3 font-['Inter'] font-medium text-[14px] lg:text-[16px] whitespace-nowrap hover:bg-gray-100 hover:scale-105 hover:shadow-lg transition-all duration-300 shadow-sm">
             Follow Us on Linkedin
           </button>
         </div>
