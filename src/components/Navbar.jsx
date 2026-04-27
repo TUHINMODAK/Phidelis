@@ -78,18 +78,18 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/company"
-                className={`${isCompanyPage ? "text-gray-300" : "text-white"} font-['Inter'] font-normal text-[16px] leading-[100%] hover:text-gray-300 transition-colors`}
-              >
-                Company
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/technology"
                 className={`${isTechnologyPage ? "text-gray-300" : "text-white"} font-['Inter'] font-normal text-[16px] leading-[100%] hover:text-gray-300 transition-colors`}
               >
                 Technology
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/company"
+                className={`${isCompanyPage ? "text-gray-300" : "text-white"} font-['Inter'] font-normal text-[16px] leading-[100%] hover:text-gray-300 transition-colors`}
+              >
+                Company
               </Link>
             </li>
           </ul>
@@ -147,20 +147,20 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/company"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`${isCompanyPage ? "text-gray-300" : "text-white"} font-['Inter'] font-normal text-[18px] hover:text-gray-300 transition-colors`}
-            >
-              Company
-            </Link>
-          </li>
-          <li>
-            <Link
               to="/technology"
               onClick={() => setIsMobileMenuOpen(false)}
               className={`${isTechnologyPage ? "text-gray-300" : "text-white"} font-['Inter'] font-normal text-[18px] hover:text-gray-300 transition-colors`}
             >
               Technology
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/company"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`${isCompanyPage ? "text-gray-300" : "text-white"} font-['Inter'] font-normal text-[18px] hover:text-gray-300 transition-colors`}
+            >
+              Company
             </Link>
           </li>
         </ul>

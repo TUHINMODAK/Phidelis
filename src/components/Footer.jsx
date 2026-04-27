@@ -11,17 +11,14 @@ const Footer = () => {
       <div className="max-w-[1440px] mx-auto flex flex-col lg:grid lg:grid-cols-[9fr_3fr_1fr] gap-12 text-white font-['Inter']">
         {/* Logo Column */}
         <div className="flex flex-col justify-between h-full">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 w-full max-w-[850px]">
             <img
-              src="/navBar/logo.png"
-              alt="Phidelis Capital Logo"
-              className="h-[40px] w-auto object-contain"
+              src="/navBar/logo3.svg"   
+              alt="Phidelis Capital"
+              className="h-[60px] md:h-[70px] lg:h-[80px] w-auto object-contain"
             />
-            <div className="text-[20px] md:text-[24px] tracking-tight">
-              <span className="font-medium">Phidelis </span>
-              <span className="text-[#3ba3eb] font-semibold">Capital</span>
-            </div>
           </div>
+
           <div className="font-normal text-[13px] opacity-70 mt-12 md:mt-0 pb-1">
             © Phidelis Capital Singapore
           </div>
@@ -40,18 +37,18 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/company"
-                className="hover:text-gray-300 transition-colors"
-              >
-                Company
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/technology"
                 className="hover:text-gray-300 transition-colors"
               >
                 Technology
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/company"
+                className="hover:text-gray-300 transition-colors"
+              >
+                Company
               </Link>
             </li>
             <a

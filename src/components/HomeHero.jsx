@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { Link } from 'react-router-dom';
 
 const HomeHero = () => {
   const containerRef = useRef(null);
@@ -17,13 +18,13 @@ const HomeHero = () => {
   }, { scope: containerRef });
 
   return (
-    <section 
+    <section
       ref={containerRef}
       id="home-hero"
       className="relative w-full h-[800px] flex flex-col items-center justify-center px-6 gap-[24px]"
     >
       {/* Background Image Setup */}
-      <div 
+      <div
         className="absolute inset-0 -z-20"
         style={{
           backgroundImage: "url('/homePage/heroImg.jpg')",
@@ -32,7 +33,7 @@ const HomeHero = () => {
           backgroundRepeat: "no-repeat"
         }}
       />
-      
+
       {/* Overlay to ensure text readability */}
       <div className="absolute inset-0 bg-black/60 -z-10" />
 
@@ -46,7 +47,7 @@ const HomeHero = () => {
         <h1 className="hero-elem text-white font-['Inter'] font-medium text-[clamp(36px,8vw,64px)] leading-[1.1] md:leading-[66px] tracking-normal text-center w-full">
           Trusted Wealth Stewardship
         </h1>
-        
+
         <p className="hero-elem text-white font-['Inter'] font-light text-[clamp(18px,4vw,32px)] leading-[1.3] md:leading-[66px] tracking-normal text-center w-full mt-2 md:mt-0">
           Built on Integrity and Insight
         </p>
@@ -54,9 +55,11 @@ const HomeHero = () => {
 
       {/* Get Started Button */}
       <div className="hero-elem mt-[24px]">
-        <button className="flex items-center justify-center gap-[10px] px-[24px] py-[12px] bg-white text-[#24346D] rounded-[30px] font-['Inter'] font-normal text-[16px] leading-[100%] hover:bg-gray-100 transition-colors">
-          Discover More
-        </button>
+        <Link to="/solutions">
+          <button className="flex items-center justify-center gap-[10px] px-[24px] py-[12px] bg-white text-[#24346D] rounded-[30px] font-['Inter'] font-normal text-[16px] leading-[100%] hover:bg-gray-100 transition-colors">
+            Discover More
+          </button>
+        </Link>
       </div>
     </section>
   );

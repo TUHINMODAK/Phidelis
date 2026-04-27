@@ -54,19 +54,21 @@ const TechnologyFeatures = () => {
   }, { scope: containerRef });
 
   return (
-    <section id="technology-features" ref={containerRef} className="w-full flex flex-col-reverse lg:flex-row justify-between overflow-hidden bg-[#1e2a5e]">
-      <div className="w-full py-10 lg:py-20 px-6 md:px-20 overflow-hidden">
+    <section
+      id="technology-features"
+      ref={containerRef}
+      className="w-full bg-[#24346D]"
+    >
+      <div className="max-w-[1440px] h-[857px] pt-[100px] px-[80px] mx-auto">
 
-        {/* Title */}
-        <h2 className="tech-header text-white font-['Inter'] font-semibold text-[32px] md:text-[40px] leading-tight mb-12 tracking-tight">
+        <h2 className="tech-header text-white text-[50px] font-semibold leading-[1.2] mb-[40px]">
           Technology Powers Clarity and Control
         </h2>
 
-        {/* Content Layout */}
-        <div className="tech-container flex flex-col lg:flex-row gap-8 items-stretch">
+        <div className="tech-container flex gap-[50px] items-start">
 
-          {/* Left Column - Image */}
-          <div className="tech-card w-full lg:w-[35%] rounded-[12px] overflow-hidden shadow-sm min-h-[200px] lg:min-h-0">
+          {/* IMAGE */}
+          <div className="tech-card w-[444px] h-[531px] rounded-[8px] overflow-hidden flex-shrink-0">
             <img
               src="/technology/technologypowers.jpg"
               alt="Technology clarity"
@@ -74,22 +76,29 @@ const TechnologyFeatures = () => {
             />
           </div>
 
-          {/* Right Column - Grid of Cards */}
-          <div className="w-full lg:w-[65%] grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* CARDS */}
+          <div className="grid grid-cols-2 gap-[34px] content-start">
+
             {techFeatures.map((feature, idx) => (
-              <div key={idx} className="tech-card h-full flex flex-col">
-                <div
-                  className="bg-white rounded-[12px] p-6 md:p-8 flex flex-col shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 grow"
-                >
-                  <h3 className="text-[#1A2552] font-['Inter'] font-semibold text-[18px] md:text-[20px] leading-[1.3] mb-4 tracking-tight pr-2">
+              <div key={idx} className="tech-card w-[383px] h-[238px] flex-shrink-0">
+                
+                <div className="bg-[#F9F9F9] rounded-[8px] p-[30px] h-full flex flex-col gap-[14px]">
+
+                  {/* TITLE */}
+                  <h3 className="text-[#24346D] font-semibold text-[26px] leading-[32px]">
                     {feature.title}
                   </h3>
-                  <p className="text-[#3b4b8f] font-['Inter'] font-medium text-[15px] leading-[1.5]">
+
+                  {/* DESCRIPTION */}
+                  <p className="text-[#1a285b] text-[18px] leading-[30px] opacity-90">
                     {feature.desc}
                   </p>
+
                 </div>
+
               </div>
             ))}
+
           </div>
 
         </div>
