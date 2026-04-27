@@ -59,7 +59,7 @@ const TechnologyFeatures = () => {
       ref={containerRef}
       className="w-full bg-[#24346D]"
     >
-      <div className="max-w-[1440px] h-[857px] pt-[100px] px-[80px] mx-auto">
+      <div className="max-w-[1440px] h-[857px] pt-[100px] px-[81px] mx-auto">
 
         <h2 className="tech-header text-white text-[50px] font-semibold leading-[1.2] mb-[40px]">
           Technology Powers Clarity and Control
